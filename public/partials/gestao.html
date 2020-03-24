@@ -1,0 +1,61 @@
+<br>
+<br>
+<br>
+
+<div class="container" ng-controller="GestaoController">
+	<div class="input-group">
+		<input type="text" class="form-control" placeholder="Filtro" ng-model="filtro" ng-model-options="{ debounce: 500 }">
+		<span class="input-group-btn">
+			&nbsp&nbsp&nbsp
+			<!--  provisorio -->
+			<a href="/gestao/novo/usuario" class="btn btn-primary" type="button">
+				Novo usuario
+			</a>
+		</span>
+		<span class="input-group-btn">
+			&nbsp&nbsp&nbsp
+			<a href="/home" class="btn btn-danger" type="button">
+				Home
+			</a>
+		</span>
+	</div>
+
+	<br>
+
+	<br>
+
+	<table class="table table-dark table-striped table-responsive-xl text-center">
+		<th colspan="7" class="text-center">Espelho do ponto</th>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Usuario</th>
+			<th scope="col">CPF</th>
+			<th scope="col">Email</th>
+			<th scope="col">Data Cadatro</th>
+			<th scope="col">Ultima atualização</th>
+			<th scope="col"></th>
+		</tr>
+		<tr ng-repeat="usuario in gestao | filter: filtro">
+			<td>{{usuario.id}}</td>
+			<td>{{usuario.nome}}</td>
+			<td>{{usuario.cpf}}</td>
+			<td>{{usuario.email}}</td>
+			<td>
+				{{
+					date = usuario.data_cadastro.split("T").join('-').split('-');
+					date[2] + '/' + date[1] + '/' + date[0] + ' ' + date[3]
+				}}
+			</td>
+			<td>
+				{{
+					date = usuario.data_update_cadastro.split("T").join('-').split('-');
+					date[2] + '/' + date[1] + '/' + date[0] + ' ' + date[3]
+				}}
+
+			</td>
+			<td>
+				<a href="/gestao/novo/usuario/{{usuario.id}}" class="btn btn-primary" type="button">Editar</a>
+			</td>
+		</tr>
+	</table>
+</div>
