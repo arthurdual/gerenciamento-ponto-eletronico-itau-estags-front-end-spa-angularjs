@@ -7,7 +7,7 @@
 - chico&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;senha: 123 
 - moro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;senha: 123
 - antonio&nbsp;senha: 123
-> Ao logar com algum desses usuarios você será direcionado para tela de gestão, onde é possivel criar um usuario "funcinario", atualizar as informações de um usuario ao clicar no botão "editar" e poderá a observar a lista de usuarios cadastrados.  
+> Ao logar com algum desses usuarios você será direcionado para tela de gestão, onde é possivel criar um usuario "funcionario", atualizar as informações de um usuario ao clicar no botão "editar" e poderá a observar a lista de usuarios cadastrados.  
 ### Funcionarios
 Funcionarios que iram o usar está pagina para bater o ponto devem ser cadastrados previamente por um gestor, é possivel na tela de gestão criar um novo usuario ao clicar no botão azul "novo usuario" localizado no canto superio direito, com o usuario criado o login deve ser feito na pagina home com o nome de usuario e senha.
 > A **Senha** do usuario sempre será 123.
