@@ -42,7 +42,7 @@ angular.module('pontoeletronico').controller('GestaoController', function ($scop
 						.error(function (erro) {
 							alert('Não foi possível fazer as alterações no usuario #' + $routeParams.usuarioId + ', Ocorreu um erro: ' + erro);
 						});
-				} else {// casdastra novo usuario
+				} else {// cadastra novo usuario
 					console.log($scope.novoUsuario);
 					$http.post(url, $scope.novoUsuario)
 						.success(function () {
